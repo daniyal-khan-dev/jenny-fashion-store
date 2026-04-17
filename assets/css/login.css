@@ -1,0 +1,418 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --rose: #C97F5F;
+    --rose-dark: #A8603F;
+    --rose-light: #E8A882;
+    --cream: #FDF6F0;
+    --blush: #F5EEE8;
+    --brand-dark: #3C3836;
+    --text-muted: #9A8F8B;
+    --border: #EDE8E3;
+    --white: #FFFFFF;
+    --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+/* Base 10px so rem values behave at intended scale */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: var(--blush);
+    overflow: hidden;
+}
+
+/* ── LAYOUT ── */
+.auth__wrap {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ── LEFT BRAND PANEL ── */
+.auth__brand {
+    flex: 0 0 42%;
+    background: linear-gradient(145deg, #3C3836 0%, #5A4A44 40%, #8B4A35 75%, #C97F5F 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth__brand::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.auth__brand--circle1 {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .04);
+    top: -80px;
+    right: -80px;
+}
+
+.auth__brand--circle2 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .06);
+    bottom: -60px;
+    left: -60px;
+}
+
+.auth__brand--inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 340px;
+}
+
+.auth__brand--logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.8rem;
+    overflow: hidden;
+}
+
+.auth__brand--logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.auth__brand--name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.auth__brand--tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, .7);
+    line-height: 1.7;
+    margin-bottom: 2.8rem;
+}
+
+.auth__brand--features {
+    list-style: none;
+    text-align: left;
+}
+
+.auth__brand--features li {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, .85);
+    margin-bottom: 1.4rem;
+}
+
+.auth__brand--features li .feat-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* ── RIGHT FORM PANEL ── */
+.auth__form--panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 3.5rem;
+    overflow-y: auto;
+    background: var(--cream);
+}
+
+.auth__form--box {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Back link */
+.auth__back {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color .25s var(--ease);
+}
+
+.auth__back:hover {
+    color: var(--rose);
+}
+
+/* Tab switcher */
+.auth__tabs {
+    display: flex;
+    background: var(--blush);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 2.2rem;
+    border: 1px solid var(--border);
+}
+
+.auth__tab {
+    flex: 1;
+    padding: .85rem 1rem;
+    border: none;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 9px;
+    transition: all .3s var(--ease);
+}
+
+.auth__tab.active {
+    background: var(--white);
+    color: var(--rose);
+    box-shadow: 0 2px 10px rgba(60, 56, 54, .08);
+}
+
+/* Form title */
+.auth__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    margin-bottom: .5rem;
+}
+
+.auth__subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Input groups */
+.auth__field {
+    margin-bottom: 1.5rem;
+}
+
+.auth__label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--brand-dark);
+    margin-bottom: .6rem;
+}
+
+.auth__input--wrap {
+    position: relative;
+}
+
+.auth__input--icon {
+    position: absolute;
+    left: 1.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    display: flex;
+}
+
+.auth__input {
+    width: 100%;
+    padding: 1.1rem 1.2rem 1.1rem 4rem;
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.35rem;
+    color: var(--brand-dark);
+    outline: none;
+    transition: all .3s var(--ease);
+}
+
+.auth__input::placeholder {
+    color: #C2B8B2;
+}
+
+.auth__input:focus {
+    border-color: var(--rose);
+    box-shadow: 0 0 0 3px rgba(201, 127, 95, .12);
+}
+
+/* Toggle password eye */
+.auth__eye {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 0;
+    display: flex;
+    transition: color .25s;
+}
+
+.auth__eye:hover {
+    color: var(--rose);
+}
+
+/* Submit button */
+.auth__submit {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: .4rem;
+    transition: all .3s var(--ease);
+    box-shadow: 0 6px 20px rgba(201, 127, 95, .35);
+    letter-spacing: .03em;
+}
+
+.auth__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(201, 127, 95, .5);
+}
+
+.auth__submit:active {
+    transform: translateY(0);
+}
+
+/* Switch text */
+.auth__switch {
+    text-align: center;
+    margin-top: 1.8rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+}
+
+.auth__switch button {
+    background: none;
+    border: none;
+    color: var(--rose);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Form visibility */
+.auth__form {
+    display: none;
+}
+
+.auth__form.active {
+    display: block;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .auth__brand {
+        display: none;
+    }
+
+    .auth__form--panel {
+        padding: 2rem;
+    }
+
+    body {
+        overflow: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth__form--panel {
+        padding: 1.5rem 2rem;
+    }
+
+    .auth__title {
+        font-size: 2rem;
+    }
+}
+
+#successAlert.show,
+#errorAlert.show {
+    top: 60px !important;
+    display: block !important;
+    animation: slideRightFadeOut 3s ease forwards;
+}
+
+span#successAlertText,
+span#errorAlertText {
+    font-size: 18px !important;
+}
+
+.alert-dismissible .btn-close {
+    font-size: 12px !important;
+}
+
+@keyframes slideRightFadeOut {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,39 @@
+RewriteEngine On
+RewriteBase /jenny/
+
+# Skip existing files & folders
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# -------------------------
+# USER ROUTES
+# -------------------------
+RewriteRule ^cart$ pages/other/cart.php [L]
+RewriteRule ^logout$ pages/other/logout.php [L]
+RewriteRule ^checkout$ pages/other/checkout.php [L]
+RewriteRule ^profile$ pages/other/profile.php [L]
+RewriteRule ^my-orders$ pages/other/my-orders.php [L]
+RewriteRule ^order-details$ pages/other/order-details.php [L]
+RewriteRule ^product$ pages/other/product-view.php [L]
+RewriteRule ^c-product$ pages/other/category.product.php [L]
+
+# -------------------------
+# ADMIN ROUTES (IMPORTANT)
+# -------------------------
+RewriteRule ^admin/dashboard$ admin/dashboard.php [L]
+RewriteRule ^admin/admins$ admin/admins.php [L]
+RewriteRule ^admin/category$ admin/category.php [L]
+RewriteRule ^admin/contact$ admin/contact.php [L]
+RewriteRule ^admin/products$ admin/products.php [L]
+RewriteRule ^admin/orders$ admin/orders.php [L]
+RewriteRule ^admin/order-details$ admin/other-pages/order-details.php [L]
+RewriteRule ^admin/order-details$ admin/other-pages/order-details.php [L]
+RewriteRule ^admin/order-history$ admin/order-history.php [L]
+RewriteRule ^admin/backup$ admin/other-pages/backup.php [L]
+RewriteRule ^admin/users$ admin/users.php [L]
+
+# -------------------------
+# GENERIC (ONLY ROOT LEVEL)
+# -------------------------
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
