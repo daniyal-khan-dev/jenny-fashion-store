@@ -8,7 +8,7 @@ A full-stack e-commerce web application for cosmetics and jewelry, built with PH
 **Email:** admin@gmail.com
 **Password:** Admin_10 
  
-🔗 Live Demo: https://daniyal-jenny-fashion-store.infinityfreeapp.com/
+🔗 Live Demo: https://jenny-fashion-store.daniyal-khan.com/
 ---
 
 ## Features
@@ -142,7 +142,7 @@ If you have any questions or need help, please:
 <div align="center">
   <h3>🌟 If you found this project helpful, please give it a star! 🌟</h3>
   
-  [![Live Demo](https://img.shields.io/badge/View%20Live%20Demo-Jenny%20Fashion%20Store-orange?style=for-the-badge&logo=netlify)](https://daniyal-jenny-fashion-store.infinityfreeapp.com/)
+  [![Live Demo](https://img.shields.io/badge/View%20Live%20Demo-Jenny%20Fashion%20Store-orange?style=for-the-badge)](https://jenny-fashion-store.daniyal-khan.com/)
   
   <img src="assets/img/website-ss/jenny-fashion-store.png" alt="Jenny Fashion Store Website Preview" width="400px" style="border-radius: 10px; margin-top: 20px;">
 </div>
