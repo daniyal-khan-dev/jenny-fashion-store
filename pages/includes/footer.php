@@ -20,20 +20,20 @@
                                     <path d="M18.3334 10.1666C18.3334 14.769 10.0001 20.9999 10.0001 20.9999C10.0001 20.9999 1.66675 14.769 1.66675 10.1666C1.66675 5.56421 5.39771 1.83325 10.0001 1.83325C14.6025 1.83325 18.3334 5.56421 18.3334 10.1666Z" stroke="currentColor" stroke-width="2" />
                                     <ellipse cx="10.0001" cy="10.1667" rx="2.5" ry="2.5" stroke="currentColor" stroke-width="2" />
                                 </svg>
-                                <span class="footer__widget--info__text">Aptech Metro, Karachi, Pakistan</span>
+                                <span class="footer__widget--info__text">Faisal Cantonment Karachi, Pakistan</span>
                             </li>
                             <li class="footer__widget--info_list">
                                 <svg class="footer__widget--info__icon" width="18" height="18" viewBox="0 0 20 20" fill="none">
                                     <path d="M13.31 1.52371L18.6133 2.11296C18.6133 2.11296 19.2026 7.41627 13.31 13.3088C7.41748 19.2014 2.11303 18.6133 2.11303 18.6133L1.52377 13.31L5.64971 10.9529L7.71153 13.0148C7.71153 13.0148 9.18467 12.7201 10.9524 10.9524C12.7202 9.18461 13.0148 7.71147 13.0148 7.71147L10.953 5.64965L13.31 1.52371Z" stroke="currentColor" stroke-width="2" />
                                 </svg>
-                                <a class="footer__widget--info__text" href="tel:+920000000000">+92 000-000000</a>
+                                <a class="footer__widget--info__text" href="tel:+920000000000">+92 317 2959985</a>
                             </li>
                             <li class="footer__widget--info_list">
                                 <svg class="footer__widget--info__icon" width="20" height="18" viewBox="0 0 24 20" fill="none">
                                     <path d="M2 3.33H22V17.5H2V3.33Z" stroke="currentColor" stroke-width="2" />
                                     <path d="M3.27 3.33H20.79L12 12.5L3.27 3.33Z" stroke="currentColor" stroke-width="2" />
                                 </svg>
-                                <a class="footer__widget--info__text" href="mailto:hello@jennyfashion.com">hello@jennyfashion.com</a>
+                                <a class="footer__widget--info__text" href="mailto:info@daniyal-khan.com">info@daniyal-khan.com</a>
                             </li>
                         </ul>
                     </div>

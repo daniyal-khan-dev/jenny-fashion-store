@@ -64,7 +64,7 @@ include('pages/includes/header.php');
 
                         <div>
                             <div class="contact__info-label">Our Location</div>
-                            <div class="contact__info-value">Aptech Metro, Karachi, Pakistan</div>
+                            <div class="contact__info-value">Faisal Cantonment Karachi, Pakistan</div>
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@ include('pages/includes/header.php');
 
                         <div>
                             <div class="contact__info-label">Phone Number</div>
-                            <div class="contact__info-value">+92 000-000000</div>
+                            <div class="contact__info-value">+92 317 2959985</div>
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@ include('pages/includes/header.php');
 
                         <div>
                             <div class="contact__info-label">Email Address</div>
-                            <div class="contact__info-value">hello@jennyfashion.com</div>
+                            <div class="contact__info-value">info@daniyal-khan.com</div>
                         </div>
                     </div>
 

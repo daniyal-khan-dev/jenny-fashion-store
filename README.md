@@ -124,9 +124,10 @@ bash start.sh
 ## 👨‍💻 Author
 
 **M. Daniyal**
+- Portfolio: https://daniyal-khan.com/
 - GitHub: https://github.com/daniyal-khan-dev
 - LinkedIn: www.linkedin.com/in/m-daniyal-khan
-- Email: daniyalkhan0445@gmail.com
+- Email: info@daniyal-khan.com
 
 ## 📞 Support
 
